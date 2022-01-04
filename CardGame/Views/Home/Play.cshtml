@@ -1,0 +1,13 @@
+﻿@model Deck
+
+@foreach(Card c in Model.cards)
+            {
+                
+<div style="display:inline-block;width:auto;border:1px solid black">
+    <img src="@c.image" /><br/>
+    @c.value of @c.suit
+    
+</div>           
+            }
+<br/>
+<a asp-action="GetNewCards" asp-controller="Home" asp-route-deck_id="@Model.deck_id"><button>Get New Cards</button></a>
